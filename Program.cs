@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+// See https://aka.ms/new-console-template for more information
 
 using FoodItems;
     
@@ -37,7 +37,7 @@ internal class Program
                 Console.WriteLine("Item added successfully!");
             }
 
-            // delete food item
+            // showing a list of items and allowing the user to delete one based off of a number
             else if (choice == "2")
             {
                 if (foodItems.Count == 0)
@@ -64,7 +64,7 @@ internal class Program
                         Console.WriteLine("Invalid selection.");
                     }
                 }
-                // asks the user which object to delete, then deletes it in an if statement kind of thing
+                
             }
             // print list of current food items
             else if (choice == "3")
@@ -78,7 +78,7 @@ internal class Program
                     Console.WriteLine("Current items: ");
                     for (int i = 0; i < foodItems.Count; i++)
                     {
-                        Console.WriteLine(i + ": " + foodItems[i].Name);
+                        Console.WriteLine($"{i + 1}: {foodItems[i].Name}");
                     }
                 }
             }
@@ -90,7 +90,7 @@ internal class Program
                 running = false;
             }
 
-            //error handling
+            //error handling if an invalid number is chosen as an option
             else
             {
                 Console.WriteLine("Invalid choice. Please try again.");
